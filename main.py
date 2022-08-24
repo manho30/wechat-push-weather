@@ -1,3 +1,12 @@
+'''
+!/usr/bin/env python
+-*- coding: utf-8 -*-
+
+__author__ = "manho"
+__copyright__ = "©2022 manho All Right Reserved"
+
+'''
+
 import datetime
 import logging
 
