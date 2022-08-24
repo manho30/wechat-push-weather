@@ -34,7 +34,7 @@ days_to_birthday = (birthday - now).days
 one_sentence = ''
 
 # ur girls openid
-touser = '';
+touser = ''
 
 def wheater():
     return requests.get('https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&lang=zh_cn&units=metric'.format(current_state, weather_key)).json()
