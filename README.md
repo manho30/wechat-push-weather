@@ -12,7 +12,7 @@
 ## 安装
 1.1 克隆本仓库
 ```bash
-$git clone https;//github.com/manho30/wechat-push-weather.git
+$git clone https://github.com/manho30/wechat-push-weather.git
 ```
 2.1 安装依赖
 ```bash
