@@ -79,7 +79,6 @@ data = {
     
 }
 
-
 def send_template_message():
     res = requests.post('https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}'.format(get_access_token()), json=data).json()
     if res.get('errcode') == 0:
