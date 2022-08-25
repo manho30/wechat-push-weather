@@ -18,32 +18,32 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # config
-weather_key = '65a6f40e00ae442c2390ffb7d4065b82'
-current_state = 'Sungai Petani'
-templete_id = 'oGVCxSp709Eokdz5OousbAnU7fiJb18FRw9Gga-X1qA'
-app_id = 'wxefdeb2bb9fa1a0aa'
-app_secret = '28c165eb4f51344a49df7576683290d4'
+weather_key = ''
+current_state = ''
+templete_id = ''
+app_id = ''
+app_secret = ''
 url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={}&secret={}'.format(app_id, app_secret) 
 
 def get_access_token():
     return requests.get(url).json().get('access_token')
 
 
-love_start = datetime.datetime.strptime('2022-01-02', '%Y-%m-%d') # 在一起的时候 格式不可错！
+love_start = datetime.datetime.strptime('yyyy-mm-dd', '%Y-%m-%d') # 在一起的时候 格式不可错！
 now = datetime.datetime.now()
 
 # already love days
 love_days = (now - love_start).days
 
 # birthday
-birthday = datetime.datetime.strptime('{}-12-14'.format(now.year), '%Y-%m-%d') # 对方生日的时候 格式不可错！
+birthday = datetime.datetime.strptime('{}-mm-dd'.format(now.year), '%Y-%m-%d') # 对方生日的时候 格式不可错！
 days_to_birthday = (birthday - now).days
 
 # LEFT SOME TEXT U WANT TO DISPLAY
 one_sentence = ''
 
 # ur girls openid
-touser = 'os_By6FmjmsGuo2c5GETd5Sr9-yw'
+touser = ''
 
 def wheater():
     return requests.get('https://api.openweathermap.org/data/2.5/weather?q={}&appid={}&lang=zh_cn&units=metric'.format(current_state, weather_key)).json()
